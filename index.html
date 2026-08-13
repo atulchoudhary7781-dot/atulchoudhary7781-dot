@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Atul Choudhary - AI Operations Specialist | Building Production-Grade Autonomous Agents & RAG Systems | Seeking Remote AI Engineering Roles">
-    <meta name="keywords" content="AI Engineer, LLM, RAG, Agentic AI, Python, Groq SDK, LangChain, Remote, H-1B">
-    <meta name="author" content="Atul Choudhary">
-    <title>Atul | AI Operations & Agentic AI Engineer</title>
+    <title>Atul| AI Operations Specialist & Engineer</title>
+    <meta name="description" content="AI Operations Specialist building Agentic AI Workflows, Low-Latency RAG Pipelines & Scalable Generative Systems">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     
     <style>
         * {
@@ -14,1200 +18,1886 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
-            --primary: #7c3aed;
-            --primary-dark: #6d28d9;
-            --secondary: #06b6d4;
-            --accent: #ec4899;
-            --dark-bg: #0f172a;
-            --darker-bg: #020617;
-            --card-bg: rgba(15, 23, 42, 0.7);
-            --card-border: rgba(124, 58, 237, 0.3);
+            --c-bg: #0a0a0a;
+            --c-bg-light: #111111;
+            --c-text: #ffffff;
+            --c-text-secondary: #a1a1aa;
+            --c-accent-orange: #F97316;
+            --c-accent-red: #EF4444;
+            --c-gradient: linear-gradient(135deg, #F97316 0%, #EF4444 100%);
         }
-
+        
         html {
             scroll-behavior: smooth;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, var(--darker-bg) 0%, #1e293b 50%, var(--darker-bg) 100%);
-            color: #e2e8f0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--c-bg);
+            color: var(--c-text);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .stars {
+        /* ============ PARTICLE CANVAS ============ */
+        #particles-canvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
             z-index: 0;
+            pointer-events: none;
         }
 
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
+        /* ============ NAVIGATION ============ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 24px;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+            transition: all 0.3s ease;
         }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
+        
+        nav.scrolled {
+            background: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
-
-        .container {
+        
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ===== NAVBAR ===== */
-        nav {
-            backdrop-filter: blur(10px);
-            background: rgba(15, 23, 42, 0.95);
-            border-bottom: 1px solid var(--card-border);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        
+        .nav-logo {
+            font-size: 28px;
+            font-weight: 900;
+            background: var(--c-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -0.5px;
+            text-decoration: none;
         }
-
-        nav ul {
-            list-style: none;
+        
+        .nav-links {
             display: flex;
-            gap: 2rem;
-            align-items: center;
+            gap: 32px;
+            list-style: none;
         }
-
-        nav a {
-            color: #e2e8f0;
+        
+        .nav-links a {
+            color: var(--c-text-secondary);
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
-
-        nav a:hover {
-            color: var(--secondary);
+        
+        .nav-links a:hover {
+            color: var(--c-accent-orange);
         }
-
-        .nav-resume {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+        
+        .nav-cta {
+            padding: 10px 24px;
+            background: var(--c-gradient);
+            color: white !important;
+            border-radius: 50px;
+            font-weight: 600 !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
         }
-
-        .nav-resume:hover {
+        
+        .nav-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(124, 58, 237, 0.5);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4) !important;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--c-text-secondary);
+            cursor: pointer;
+            padding: 8px;
         }
 
-        /* ===== HERO SECTION ===== */
-        .hero {
+        /* ============ SECTIONS COMMON ============ */
+        section {
+            position: relative;
+            z-index: 10;
+            padding: 100px 24px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(239, 68, 68, 0.15) 100%);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            font-size: 13px;
+            color: var(--c-accent-orange);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 800;
+            background: var(--c-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--c-text-secondary);
+            max-width: 600px;
+            margin-bottom: 48px;
+        }
+
+        /* ============ HERO SECTION ============ */
+        #hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding: 4rem 0;
+            padding-top: 80px;
         }
-
-        .hero-content {
-            z-index: 2;
-            max-width: 900px;
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            margin-bottom: 32px;
+            font-size: 14px;
+            color: var(--c-accent-orange);
+            font-weight: 600;
+            animation: pulse 2s infinite;
         }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 50%, #ec4899 100%);
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .hero-title {
+            font-size: clamp(48px, 10vw, 96px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: var(--c-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: fadeInDown 0.8s ease-out;
-            line-height: 1.2;
         }
-
-        .hero .tagline {
-            font-size: 1.3rem;
-            color: #cbd5e1;
-            margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+        
+        .hero-typing {
+            font-size: clamp(20px, 4vw, 32px);
+            color: var(--c-text-secondary);
+            margin-bottom: 24px;
+            height: 40px;
         }
-
-        .hero-subtitle {
-            font-size: 1rem;
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            animation: fadeInUp 0.8s ease-out 0.4s both;
+        
+        .hero-typing span {
+            background: linear-gradient(135deg, #FB923C 0%, #F87171 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+        
+        .hero-typing .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background: var(--c-accent-orange);
+            margin-left: 4px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            color: var(--c-text-secondary);
+            max-width: 800px;
+            margin: 0 auto 40px;
             line-height: 1.8;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
-
-        .hero-stats {
+        
+        .hero-description strong {
+            color: var(--c-accent-orange);
+        }
+        
+        .hero-buttons {
             display: flex;
+            gap: 16px;
             justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
             flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease-out 0.5s both;
+            margin-bottom: 60px;
         }
-
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: var(--c-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(249, 115, 22, 0.4);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: transparent;
+            color: var(--c-text);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            border: 2px solid rgba(249, 115, 22, 0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(249, 115, 22, 0.1);
+            border-color: var(--c-accent-orange);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
         .stat-item {
             text-align: center;
         }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--secondary);
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--c-accent-orange);
+            margin-bottom: 4px;
         }
-
+        
         .stat-label {
-            font-size: 0.9rem;
-            color: #94a3b8;
+            font-size: 14px;
+            color: var(--c-text-secondary);
         }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease-out 0.6s both;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 0.9rem 2.2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(124, 58, 237, 0.6);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--secondary);
-            border: 2px solid var(--secondary);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(6, 182, 212, 0.1);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ===== PROJECTS SECTION ===== */
-        .projects {
-            padding: 6rem 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .jarvis-hero {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
-            border: 2px solid var(--card-border);
-            border-radius: 16px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-            animation: slideInUp 0.8s ease-out;
-        }
-
-        .jarvis-hero::before {
-            content: '';
+        
+        .scroll-indicator {
             position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.25) 0%, transparent 70%);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .jarvis-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .jarvis-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
-            color: white;
-            padding: 0.6rem 1.4rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 16px rgba(236, 72, 153, 0.3);
-        }
-
-        .jarvis-hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #f1f5f9;
-        }
-
-        .jarvis-hero p {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .achievement-box {
-            background: rgba(6, 182, 212, 0.1);
-            border-left: 4px solid var(--secondary);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-
-        .achievement-box ul {
-            list-style: none;
-        }
-
-        .achievement-box li {
-            margin-bottom: 0.8rem;
-            color: #cbd5e1;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .achievement-box li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
-        }
-
-        .tech-stack {
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-tag {
-            background: rgba(6, 182, 212, 0.15);
-            border: 1px solid var(--secondary);
-            color: var(--secondary);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--c-text-secondary);
+            font-size: 14px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
         }
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
-            opacity: 0;
-            transition: opacity 0.3s;
+        /* ============ JARVIS SHOWCASE ============ */
+        #jarvis {
+            background: linear-gradient(180deg, transparent 0%, rgba(249, 115, 22, 0.03) 50%, transparent 100%);
         }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--secondary);
-            box-shadow: 0 16px 32px rgba(124, 58, 237, 0.2);
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .project-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-            color: #f1f5f9;
-        }
-
-        .impact-section {
-            background: rgba(124, 58, 237, 0.08);
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            font-size: 0.95rem;
-        }
-
-        .impact-section strong {
-            color: var(--secondary);
-        }
-
-        .project-card p {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 0.8rem;
-            flex-grow: 1;
-        }
-
-        .project-features {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .feature-tag {
-            background: rgba(124, 58, 237, 0.2);
-            color: var(--primary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0px);
-            }
-            50% {
-                transform: translate(30px, -30px);
-            }
-        }
-
-        /* ===== SKILLS SECTION ===== */
-        .skills {
-            padding: 6rem 0;
-            background: rgba(124, 58, 237, 0.03);
-            border-top: 1px solid var(--card-border);
-            border-bottom: 1px solid var(--card-border);
-        }
-
-        .skills-grid {
+        
+        .jarvis-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
-
-        .skill-category {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s;
-        }
-
-        .skill-category:hover {
-            border-color: var(--secondary);
-            transform: translateY(-4px);
-        }
-
-        .skill-category h3 {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .skill-item {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(6, 182, 212, 0.3));
-            border: 1px solid var(--card-border);
-            padding: 0.6rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #f1f5f9;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .skill-item:hover {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.5), rgba(6, 182, 212, 0.5));
-            border-color: var(--secondary);
-            transform: translateY(-2px);
-        }
-
-        /* ===== EXPERIENCE SECTION ===== */
-        .experience {
-            padding: 6rem 0;
-        }
-
-        .timeline {
+        
+        .jarvis-visual {
             position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
-        }
-
-        .timeline-item {
-            margin-bottom: 3rem;
-            width: 45%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            margin-left: 0;
-            text-align: right;
-            padding-right: 3rem;
-        }
-
-        .timeline-item:nth-child(even) {
-            margin-left: 55%;
-            padding-left: 3rem;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background: var(--primary);
-            border: 3px solid var(--darker-bg);
-            border-radius: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 0;
-            box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
-        }
-
-        .timeline-content {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .timeline-content h3 {
-            color: var(--secondary);
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .timeline-content .role {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-content .date {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .timeline-content p {
-            color: #cbd5e1;
-            font-size: 0.95rem;
-        }
-
-        /* ===== FOOTER / CTA ===== */
-        .footer {
-            padding: 4rem 0;
-            border-top: 1px solid var(--card-border);
-            text-align: center;
-        }
-
-        .footer h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .footer .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #cbd5e1;
-        }
-
-        .footer .availability {
-            color: var(--secondary);
-            font-weight: 600;
-            margin-bottom: 2rem;
-            font-size: 1.05rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
+            aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--secondary);
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 1.2rem;
         }
-
-        .social-link:hover {
-            transform: translateY(-5px);
-            border-color: var(--secondary);
-            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);
-            background: rgba(6, 182, 212, 0.1);
+        
+        .jarvis-orb {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(249, 115, 22, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: glow 3s infinite;
         }
-
-        .employment-details {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--card-border);
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 60px rgba(249, 115, 22, 0.3); }
+            50% { box-shadow: 0 0 100px rgba(239, 68, 68, 0.4); }
         }
-
-        .employment-details p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
+        
+        .jarvis-orb-inner {
+            font-size: 64px;
         }
-
-        .employment-details strong {
-            color: var(--secondary);
+        
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 360px;
+            height: 360px;
+            margin-left: -180px;
+            margin-top: -180px;
+            animation: rotate 20s linear infinite;
         }
-
-        .footer-credit {
-            color: #64748b;
-            margin-top: 1rem;
-            font-size: 0.85rem;
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
-
-        /* ===== MODAL ===== */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 200;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
+        
+        .orbit-dot {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--c-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
         }
-
-        .modal-content {
-            background: var(--card-bg);
-            margin: 10% auto;
-            padding: 2rem;
-            border: 1px solid var(--card-border);
+        
+        .orbit-dot:nth-child(1) { top: 0; left: 50%; margin-left: -24px; }
+        .orbit-dot:nth-child(2) { right: 0; top: 50%; margin-top: -24px; }
+        .orbit-dot:nth-child(3) { bottom: 0; left: 50%; margin-left: -24px; }
+        .orbit-dot:nth-child(4) { left: 0; top: 50%; margin-top: -24px; }
+        
+        .jarvis-center-text {
+            position: absolute;
+            text-align: center;
+        }
+        
+        .jarvis-center-text h3 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .jarvis-center-text p {
+            font-size: 14px;
+            color: var(--c-accent-orange);
+        }
+        
+        .jarvis-features {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .feature-card {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: var(--c-accent-orange);
+            transform: translateX(10px);
+        }
+        
+        .feature-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
-            width: 90%;
-            max-width: 500px;
-            animation: modalSlide 0.3s ease-out;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--c-accent-orange);
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        
+        .feature-description {
+            color: var(--c-text-secondary);
+            font-size: 14px;
+            line-height: 1.7;
+            padding-left: 64px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 24px;
+        }
+        
+        .tech-badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: rgba(249, 115, 22, 0.15);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            color: var(--c-accent-orange);
+            font-size: 13px;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Architecture Diagram */
+        .architecture {
+            margin-top: 48px;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 20px;
+        }
+        
+        .architecture h3 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: var(--c-text);
+        }
+        
+        .arch-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+        
+        .arch-item {
+            text-align: center;
+            padding: 20px 12px;
+            background: rgba(249, 115, 22, 0.05);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .arch-item:hover {
+            background: rgba(249, 115, 22, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .arch-icon {
+            font-size: 28px;
+            color: var(--c-accent-orange);
+            margin-bottom: 12px;
+        }
+        
+        .arch-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--c-text);
+            margin-bottom: 4px;
+        }
+        
+        .arch-desc {
+            font-size: 11px;
+            color: var(--c-text-secondary);
         }
 
-        @keyframes modalSlide {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        /* ============ SKILLS SECTION ============ */
+        #skills {
+            background: linear-gradient(180deg, transparent 0%, rgba(239, 68, 68, 0.03) 50%, transparent 100%);
         }
-
-        .modal-close {
-            color: #e2e8f0;
-            float: right;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
-
-        .modal-close:hover {
-            color: var(--secondary);
+        
+        .skill-card {
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            transition: all 0.3s ease;
         }
-
-        .modal h2 {
-            color: var(--secondary);
-            margin-bottom: 1rem;
+        
+        .skill-card:hover {
+            border-color: var(--c-accent-orange);
+            background: rgba(249, 115, 22, 0.05);
         }
-
-        .modal-form input,
-        .modal-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid var(--card-border);
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .skill-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--c-text);
+        }
+        
+        .skill-name i {
+            width: 32px;
+            height: 32px;
             border-radius: 8px;
-            background: rgba(15, 23, 42, 0.5);
-            color: #e2e8f0;
-            font-family: inherit;
+            background: rgba(249, 115, 22, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--c-accent-orange);
+        }
+        
+        .skill-level {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--c-accent-orange);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: var(--c-gradient);
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.5s ease-out;
         }
 
-        .modal-form input:focus,
-        .modal-form textarea:focus {
-            outline: none;
-            border-color: var(--secondary);
+        /* ============ EXPERIENCE SECTION ============ */
+        #experience {
+            background: linear-gradient(180deg, transparent 0%, rgba(249, 115, 22, 0.03) 50%, transparent 100%);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--c-gradient);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 36px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--c-bg);
+            border: 4px solid var(--c-accent-orange);
+        }
+        
+        .timeline-item:hover {
+            border-color: var(--c-accent-orange);
+            transform: translateX(10px);
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .timeline-role {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--c-text);
+        }
+        
+        .timeline-company {
+            font-size: 16px;
+            color: var(--c-accent-orange);
+            font-weight: 500;
+        }
+        
+        .timeline-date {
+            font-size: 14px;
+            color: var(--c-text-secondary);
+            padding: 6px 16px;
+            background: rgba(249, 115, 22, 0.1);
+            border-radius: 20px;
+        }
+        
+        .timeline-description {
+            color: var(--c-text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        
+        .timeline-highlights {
+            list-style: none;
+        }
+        
+        .timeline-highlights li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--c-text-secondary);
+            line-height: 1.6;
+        }
+        
+        .timeline-highlights li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--c-accent-orange);
+            font-weight: bold;
+        }
+        
+        .timeline-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        
+        .timeline-tech span {
+            padding: 4px 12px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--c-text-secondary);
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
+        /* ============ EDUCATION SECTION ============ */
+        #education {
+            background: linear-gradient(180deg, transparent 0%, rgba(239, 68, 68, 0.03) 50%, transparent 100%);
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .edu-card {
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .edu-card:hover {
+            border-color: var(--c-accent-orange);
+            transform: translateY(-10px);
+        }
+        
+        .edu-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--c-accent-orange);
+        }
+        
+        .edu-degree {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--c-text);
+            margin-bottom: 12px;
+        }
+        
+        .edu-school {
+            font-size: 15px;
+            color: var(--c-accent-orange);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .edu-period {
+            font-size: 13px;
+            color: var(--c-text-secondary);
+            margin-bottom: 12px;
+        }
+        
+        .edu-highlight {
+            font-size: 13px;
+            color: var(--c-text-secondary);
+            font-style: italic;
+        }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
+        /* ============ CERTIFICATIONS & AWARDS ============ */
+        #certifications {
+            background: linear-gradient(180deg, transparent 0%, rgba(249, 115, 22, 0.03) 50%, transparent 100%);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .cert-list, .award-list {
+            list-style: none;
+        }
+        
+        .cert-item, .award-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .cert-item:hover, .award-item:hover {
+            border-color: var(--c-accent-orange);
+            transform: translateX(5px);
+        }
+        
+        .cert-icon, .award-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        
+        .cert-name, .award-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--c-text);
+            margin-bottom: 4px;
+        }
+        
+        .cert-issuer, .award-desc {
+            font-size: 13px;
+            color: var(--c-text-secondary);
+        }
 
+        /* ============ CONTACT SECTION ============ */
+        #contact {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.08) 0%, rgba(239, 68, 68, 0.08) 100%);
+            border-top: 1px solid rgba(249, 115, 22, 0.2);
+            border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+        }
+        
+        .contact-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(249, 115, 22, 0.2);
+            border-radius: 24px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(249, 115, 22, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--c-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        
+        .contact-label {
+            font-size: 13px;
+            color: var(--c-text-secondary);
+            margin-bottom: 4px;
+        }
+        
+        .contact-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--c-text);
+        }
+        
+        .contact-value a {
+            color: var(--c-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-value a:hover {
+            color: var(--c-accent-orange);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            position: relative;
+            z-index: 10;
+            padding: 32px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(249, 115, 22, 0.2);
+        }
+        
+        footer p {
+            color: var(--c-text-secondary);
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: var(--c-accent-orange);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1024px) {
+            .jarvis-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            
+            .arch-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
             .hero-stats {
-                gap: 1rem;
+                grid-template-columns: repeat(2, 1fr);
             }
-
-            .jarvis-hero {
-                padding: 1.5rem;
-            }
-
-            .jarvis-hero h2 {
-                font-size: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .timeline::before {
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
                 left: 0;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 2rem !important;
-                padding-right: 0 !important;
-                text-align: left !important;
-                margin-left: 0 !important;
-            }
-
-            .timeline-dot {
-                left: 0;
-            }
-
-            .cta-buttons {
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
                 flex-direction: column;
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid rgba(249, 115, 22, 0.2);
             }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            section {
+                padding: 80px 16px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .arch-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            
+            .jarvis-orb {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .orbit {
+                width: 260px;
+                height: 260px;
+                margin-left: -130px;
+                margin-top: -130px;
+            }
+        }
 
-            .btn {
-                width: 100%;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
+        /* ============ ANIMATIONS ============ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <div class="stars" id="starfield"></div>
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="container">
-            <div class="logo">⚡ ATUL </div>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AC</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#jarvis">Jarvis AI</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://drive.google.com/file/d/1QvOH7RPyfM0ACY_dZ5_Eg86-aNAZdeHE/view?usp=sharing">📄 Resume</a></li>
+                <li><a href="#contact" class="nav-cta">Hire Me</a></li>
             </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>AI Engineer & Agentic AI Specialist</h1>
-            <p class="tagline">Building Production-Grade Autonomous Agents & High-Performance RAG Systems</p>
-            <p class="hero-subtitle">
-                I specialize in turning complex AI research into production-ready, high-performance systems. 
-                Currently focused on agentic AI, autonomous workflows, and RAG architecture at scale.
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-badge fade-in">
+                <i data-lucide="sparkles"></i>
+                Available for Opportunities
+            </div>
+            
+            <h1 class="hero-title fade-in">Atul</h1>
+            
+            <div class="hero-typing fade-in">
+                <span id="typing-text"></span>
+                <span class="cursor"></span>
+            </div>
+            
+            <p class="hero-description fade-in">
+                Building the future of AI with <strong>near-zero latency</strong> autonomous agents, 
+                <strong>multi-agent orchestration</strong>, and 
+                <strong>production-grade RAG pipelines</strong> 
+                that bridge cutting-edge research with real-world impact.
             </p>
             
-            <div class="hero-stats">
+            <div class="hero-buttons fade-in">
+                <a href="#jarvis" class="btn-primary">
+                    <i data-lucide="rocket"></i>
+                    Explore Jarvis AI
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <i data-lucide="mail"></i>
+                    Get In Touch
+                </a>
+            </div>
+            
+            <div class="hero-stats fade-in">
                 <div class="stat-item">
-                    <div class="stat-number">6+</div>
-                    <div class="stat-label">Major Projects</div>
+                    <div class="stat-value">&lt;10ms</div>
+                    <div class="stat-label">Latency</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">95th %ile</div>
-                    <div class="stat-label">CCAT Score</div>
+                    <div class="stat-value">7+</div>
+                    <div class="stat-label">Months Exp</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">2 mo.</div>
-                    <div class="stat-label">At Invisible Tech</div>
+                    <div class="stat-value">5+</div>
+                    <div class="stat-label">AI Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Possibilities</div>
                 </div>
             </div>
-
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Let's Connect</a>
-            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i data-lucide="chevron-down"></i>
         </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="projects" id="projects">
+    <!-- Jarvis AI Showcase -->
+    <section id="jarvis">
         <div class="container">
-            <h2 class="section-title">Featured Projects & Impact</h2>
+            <div class="section-tag fade-in">
+                <i data-lucide="brain"></i>
+                Featured Project
+            </div>
+            <h2 class="section-title fade-in">JARVIS AI</h2>
+            <p class="section-subtitle fade-in">
+                A multimodal autonomous AI agent optimized for near-zero latency using Groq SDK, 
+                featuring advanced multi-agent orchestration and real-world tool integration.
+            </p>
             
-            <!-- JARVIS HERO -->
-            <div class="jarvis-hero">
-                <div class="jarvis-content">
-                    <span class="jarvis-badge">⭐ Flagship Project - Production Ready</span>
-                    <h2>Jarvis: Autonomous Multimodal AI Agent</h2>
-                    
-                    <p><strong>Description:</strong> A production-ready, Iron Man-inspired autonomous agent optimized for sub-second latency using the Groq SDK. Architected a modular system capable of handling complex task execution with persistent SQLite memory, deployed across cloud infrastructure (GCP/AWS/Azure).</p>
-
-                    <div class="achievement-box">
-                        <strong style="color: var(--secondary); display: block; margin-bottom: 1rem;">🎯 Key Technical Achievements:</strong>
-                        <ul>
-                            <li><strong>Sub-second Latency:</strong> Optimized inference using Groq SDK for ultra-fast response times</li>
-                            <li><strong>Multi-Agent Orchestration:</strong> Complex task execution across specialized agents</li>
-                            <li><strong>RAG Pipeline:</strong> Advanced retrieval with persistent SQLite memory management</li>
-                            <li><strong>FastAPI Server:</strong> 20+ REST endpoints for production integration</li>
-                            <li><strong>Voice Control:</strong> Natural language voice interface for hands-free interaction</li>
-                            <li><strong>Cloud Deployment:</strong> Docker containerization with GCP/AWS/Azure deployment guides</li>
-                        </ul>
+            <div class="jarvis-grid">
+                <div class="jarvis-visual fade-in">
+                    <div class="orbit">
+                        <div class="orbit-dot"><i data-lucide="zap"></i></div>
+                        <div class="orbit-dot"><i data-lucide="network"></i></div>
+                        <div class="orbit-dot"><i data-lucide="shield"></i></div>
+                        <div class="orbit-dot"><i data-lucide="message-square"></i></div>
                     </div>
-
+                    
+                    <div class="jarvis-orb">
+                        <div class="jarvis-orb-inner"><i data-lucide="bot"></i></div>
+                    </div>
+                    
+                    <div class="jarvis-center-text">
+                        <h3>JARVIS</h3>
+                        <p>Autonomous Agent</p>
+                    </div>
+                </div>
+                
+                <div class="jarvis-features">
+                    <div class="feature-card fade-in">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i data-lucide="zap"></i></div>
+                            <h3 class="feature-title">Near-Zero Latency</h3>
+                        </div>
+                        <p class="feature-description">
+                            Optimized using Groq SDK for ultra-fast inference. Achieves sub-10ms response times through high-performance LPU (Language Processing Unit) architecture, enabling real-time conversational AI experiences.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i data-lucide="network"></i></div>
+                            <h3 class="feature-title">Multi-Agent Orchestration</h3>
+                        </div>
+                        <p class="feature-description">
+                            Complex multi-step reasoning tasks handled by specialized agent swarms. Each agent focuses on specific capabilities - reasoning, tool use, code execution, and memory management - working in harmony.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i data-lucide="layers"></i></div>
+                            <h3 class="feature-title">High-Performance RAG Pipelines</h3>
+                        </div>
+                        <p class="feature-description">
+                            Advanced retrieval-augmented generation with semantic search using embeddings. Intelligent context retrieval ensures accurate, up-to-date responses with minimal hallucination.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <div class="feature-header">
+                            <div class="feature-icon"><i data-lucide="code-2"></i></div>
+                            <h3 class="feature-title">Cross-Platform UI (Flet)</h3>
+                        </div>
+                        <p class="feature-description">
+                            Migrated to Flet framework for seamless cross-platform experience. Native-like performance on Web, Desktop, and Mobile with a single codebase.
+                        </p>
+                    </div>
+                    
                     <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Groq SDK</span>
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">RAG</span>
-                        <span class="tech-tag">Multi-Agent Orchestration</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">GCP/AWS/Azure</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Groq SDK</span>
+                        <span class="tech-badge">LangChain</span>
+                        <span class="tech-badge">Flet</span>
+                        <span class="tech-badge">RAG</span>
+                        <span class="tech-badge">Vector DB</span>
+                        <span class="tech-badge">Embeddings</span>
+                        <span class="tech-badge">FastAPI</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Architecture Diagram -->
+            <div class="architecture fade-in">
+                <h3>System Architecture</h3>
+                <div class="arch-grid">
+                    <div class="arch-item">
+                        <div class="arch-icon"><i data-lucide="mouse-pointer-click"></i></div>
+                        <div class="arch-name">User Interface</div>
+                        <div class="arch-desc">Flet Cross-Platform</div>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon"><i data-lucide="globe"></i></div>
+                        <div class="arch-name">API Gateway</div>
+                        <div class="arch-desc">FastAPI REST</div>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon"><i data-lucide="brain"></i></div>
+                        <div class="arch-name">Orchestrator</div>
+                        <div class="arch-desc">Multi-Agent System</div>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon"><i data-lucide="cpu"></i></div>
+                        <div class="arch-name">Inference Engine</div>
+                        <div class="arch-desc">Groq SDK LPU</div>
+                    </div>
+                    <div class="arch-item">
+                        <div class="arch-icon"><i data-lucide="database"></i></div>
+                        <div class="arch-name">Knowledge Base</div>
+                        <div class="arch-desc">RAG + Embeddings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-tag fade-in">
+                <i data-lucide="code-2"></i>
+                Technical Skills
+            </div>
+            <h2 class="section-title fade-in">Skills & Expertise</h2>
+            <p class="section-subtitle fade-in">
+                Mastered technologies for building production-grade AI systems
+            </p>
+            
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="terminal"></i>
+                            Python
+                        </div>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="workflow"></i>
+                            LangChain
+                        </div>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="cloud"></i>
+                            Vertex AI
+                        </div>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="zap"></i>
+                            Groq SDK
+                        </div>
+                        <span class="skill-level">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="92"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="server"></i>
+                            FastAPI
+                        </div>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="brain"></i>
+                            PyTorch
+                        </div>
+                        <span class="skill-level">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="82"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="layers"></i>
+                            RAG Systems
+                        </div>
+                        <span class="skill-level">93%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="93"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="message-square"></i>
+                            Prompt Engineering
+                        </div>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="users"></i>
+                            Multi-Agent Systems
+                        </div>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="layout"></i>
+                            Streamlit / Flet
+                        </div>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="search"></i>
+                            Semantic Search
+                        </div>
+                        <span class="skill-level">87%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="87"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <div class="skill-header">
+                        <div class="skill-name">
+                            <i data-lucide="bar-chart-3"></i>
+                            Data Processing
+                        </div>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-tag fade-in">
+                <i data-lucide="rocket"></i>
+                Career Journey
+            </div>
+            <h2 class="section-title fade-in">Experience</h2>
+            <p class="section-subtitle fade-in">
+                Building cutting-edge AI solutions
+            </p>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="timeline-role">AI Product Engineer</h3>
+                            <p class="timeline-company">Jarvis AI (Independent Project)</p>
+                        </div>
+                        <span class="timeline-date">Feb 2026 - Present</span>
+                    </div>
+                    <p class="timeline-description">
+                        Leading the development of Jarvis, an autonomous AI agent system from concept to deployment.
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li>Architected & developed Jarvis, a multimodal autonomous AI agent</li>
+                        <li>Optimized for near-zero latency using Groq SDK and high-performance RAG pipelines</li>
+                        <li>Integrated Multi-agent orchestration for complex, multi-step reasoning tasks</li>
+                        <li>Migrated UI to Flet for seamless cross-platform experience</li>
+                        <li>Focusing on Agentic Workflows and real-world tool integration</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span>Python</span>
+                        <span>Groq SDK</span>
+                        <span>LangChain</span>
+                        <span>Flet</span>
+                        <span>RAG</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="timeline-role">AI & Machine Learning Intern</h3>
+                            <p class="timeline-company">Venura Tech</p>
+                        </div>
+                        <span class="timeline-date">May 2026 - Jun 2026</span>
+                    </div>
+                    <p class="timeline-description">
+                        Operating as an Advanced Specialist in AI training and system operations.
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li>Refined LLMs using PyTorch and regression techniques for improved performance</li>
+                        <li>Developed complex agentic workflows and multi-agent orchestration systems</li>
+                        <li>Engineered prompt datasets (Few-shot, Chain-of-Thought) to improve accuracy</li>
+                        <li>Deployed scalable solutions with FastAPI REST APIs for enterprise clients</li>
+                        <li>Implemented semantic search capabilities using embeddings in RAG pipelines</li>
+                        <li>Utilized pandas and numpy for data preprocessing and feature engineering</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span>PyTorch</span>
+                        <span>FastAPI</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Embeddings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-tag fade-in">
+                <i data-lucide="graduation-cap"></i>
+                Academic Background
+            </div>
+            <h2 class="section-title fade-in">Education</h2>
+            <p class="section-subtitle fade-in">
+                Strong foundation in computer science and technology
+            </p>
+            
+            <div class="education-grid">
+                <div class="edu-card fade-in">
+                    <div class="edu-icon"><i data-lucide="globe"></i></div>
+                    <h3 class="edu-degree">Diploma in Software Engineering</h3>
+                    <p class="edu-school">Indian Institute of Computer Science</p>
+                    <p class="edu-period">Nov 2022 - Nov 2025</p>
+                    <p class="edu-highlight">Primary Focus • Core CS Foundation</p>
+                </div>
+                
+                <div class="edu-card fade-in">
+                    <div class="edu-icon"><i data-lucide="trending-up"></i></div>
+                    <h3 class="edu-degree">Diploma in Digital Marketing</h3>
+                    <p class="edu-school">Indian Institute of Computer Science</p>
+                    <p class="edu-period">Mar 2025 - Jul 2025</p>
+                    <p class="edu-highlight">Specialization • Digital Strategy</p>
+                </div>
+                
+                <div class="edu-card fade-in">
+                    <div class="edu-icon"><i data-lucide="book-open"></i></div>
+                    <h3 class="edu-degree">Bachelor of Arts (BA)</h3>
+                    <p class="edu-school">University of Delhi (DU SOL)</p>
+                    <p class="edu-period">Nov 2022 - Nov 2025</p>
+                    <p class="edu-highlight">Academic Breadth • Liberal Arts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Awards Section -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-tag fade-in">
+                <i data-lucide="trophy"></i>
+                Achievements
+            </div>
+            <h2 class="section-title fade-in">Certifications & Awards</h2>
+            <p class="section-subtitle fade-in">
+                Recognized expertise and continuous learning
+            </p>
+            
+            <div class="two-column">
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: var(--c-text); margin-bottom: 24px;">
+                        <i data-lucide="award" style="display: inline; vertical-align: middle; margin-right: 8px;"></i>
+                        Certifications
+                    </h3>
+                    <ul class="cert-list">
+                        <li class="cert-item fade-in">
+                            <div class="cert-icon">🧠</div>
+                            <div>
+                                <div class="cert-name">Introduction to Generative AI</div>
+                                <div class="cert-issuer">Google Cloud</div>
+                            </div>
+                        </li>
+                        <li class="cert-item fade-in">
+                            <div class="cert-icon">✨</div>
+                            <div>
+                                <div class="cert-name">Gen AI: Beyond the Chatbot</div>
+                                <div class="cert-issuer">Google Cloud</div>
+                            </div>
+                        </li>
+                        <li class="cert-item fade-in">
+                            <div class="cert-icon">📊</div>
+                            <div>
+                                <div class="cert-name">Data Analytics Job Simulation</div>
+                                <div class="cert-issuer">Deloitte Australia</div>
+                            </div>
+                        </li>
+                        <li class="cert-item fade-in">
+                            <div class="cert-icon">💻</div>
+                            <div>
+                                <div class="cert-name">Technology Job Simulation</div>
+                                <div class="cert-issuer">Deloitte Australia</div>
+                            </div>
+                        </li>
+                        <li class="cert-item fade-in">
+                            <div class="cert-icon">🤖</div>
+                            <div>
+                                <div class="cert-name">AI for Coding using Tabnine</div>
+                                <div class="cert-issuer">Tabnine</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: var(--c-text); margin-bottom: 24px;">
+                        <i data-lucide="trophy" style="display: inline; vertical-align: middle; margin-right: 8px;"></i>
+                        Honors & Awards
+                    </h3>
+                    <ul class="award-list">
+                        <li class="award-item fade-in">
+                            <div class="award-icon">🏆</div>
+                            <div>
+                                <div class="award-name">Criteria Cognitive Aptitude Test (CCAT)</div>
+                                <div class="award-desc">Recognized for cognitive excellence</div>
+                            </div>
+                        </li>
+                        <li class="award-item fade-in">
+                            <div class="award-icon">🥇</div>
+                            <div>
+                                <div class="award-name">Student of the Month - Consecutive Winner</div>
+                                <div class="award-desc">Computer Science Excellence</div>
+                            </div>
+                        </li>
+                        <li class="award-item fade-in">
+                            <div class="award-icon">⭐</div>
+                            <div>
+                                <div class="award-name">Student of the Month (Consecutive)</div>
+                                <div class="award-desc">Consistent Academic Performance</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrapper fade-in">
+                <div style="text-align: center; margin-bottom: 32px;">
+                    <div class="section-tag" style="display: inline-flex;">
+                        <i data-lucide="mail"></i>
+                        Let's Connect
+                    </div>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p style="color: var(--c-text-secondary); font-size: 16px; max-width: 500px; margin: 16px auto 0;">
+                        Ready to build the future of AI together? I'm open for opportunities, collaborations, and interesting conversations about artificial intelligence.
+                    </p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="mail"></i></div>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">
+                                <a href="mailto:atulchoudhary7781@gmail.com">atulchoudhary7781@gmail.com</a>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
-                        <a href="https://github.com/atulchoudhary7781-dot" target="_blank" class="btn btn-secondary">View Source Code →</a>
-                        <a href="mailto:atulchoudhary7781@gmail.com?subject=Jarvis%20Demo%20Request" class="btn btn-secondary">Request Live Demo</a>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <div class="contact-label">Location</div>
+                            <div class="contact-value">Greater Delhi Area, India</div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- OTHER PROJECTS -->
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">🧠</div>
-                    <h3>NeuroMind AI</h3>
-                    <div class="impact-section">
-                        <p><strong>Problem:</strong> Manual image and text processing required separate tools and manual coordination.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="link"></i></div>
+                        <div>
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">
+                                <a href="https://www.linkedin.com/in/atul-choudhary-018037301" target="_blank">Connect with me →</a>
+                            </div>
+                        </div>
                     </div>
-                    <p><strong>Solution:</strong> Built multi-modal Streamlit app with Anthropic API for unified AI capabilities.</p>
-                    <p><strong>Result:</strong> <span style="color: var(--secondary);">60% reduction</span> in processing time with seamless multi-modal interaction.</p>
-                    <div class="project-features">
-                        <span class="feature-tag">Streamlit</span>
-                        <span class="feature-tag">Anthropic API</span>
-                        <span class="feature-tag">Multi-Modal</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">♟️</div>
-                    <h3>Chess Engine with AI</h3>
-                    <div class="impact-section">
-                        <p><strong>Problem:</strong> Standard implementations lacked intelligent decision-making at competitive levels.</p>
-                    </div>
-                    <p><strong>Solution:</strong> Engineered chess engine using Minimax + alpha-beta pruning.</p>
-                    <p><strong>Result:</strong> <span style="color: var(--secondary);">10x faster</span> move calculation with 95% accuracy in gameplay.</p>
-                    <div class="project-features">
-                        <span class="feature-tag">Minimax Algorithm</span>
-                        <span class="feature-tag">Alpha-Beta Pruning</span>
-                        <span class="feature-tag">Game AI</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🌐</div>
-                    <h3>NEXUS AI Website</h3>
-                    <div class="impact-section">
-                        <p><strong>Problem:</strong> Static designs failed to capture AI technology's dynamic nature visually.</p>
-                    </div>
-                    <p><strong>Solution:</strong> Created AI-themed website with real-time canvas animations and futuristic design.</p>
-                    <p><strong>Result:</strong> <span style="color: var(--secondary);">40% increase</span> in engagement, 3.5x average session duration.</p>
-                    <div class="project-features">
-                        <span class="feature-tag">Canvas Animation</span>
-                        <span class="feature-tag">React</span>
-                        <span class="feature-tag">Interactive UI</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">💰</div>
-                    <h3>Smart Expense Tracker</h3>
-                    <div class="impact-section">
-                        <p><strong>Problem:</strong> Manual expense tracking consumed hours of data entry daily.</p>
-                    </div>
-                    <p><strong>Solution:</strong> Built Python app with SQLite and ML-based currency prediction.</p>
-                    <p><strong>Result:</strong> <span style="color: var(--secondary);">85% automation</span> with 92% prediction accuracy, saved 4+ hours weekly.</p>
-                    <div class="project-features">
-                        <span class="feature-tag">Python</span>
-                        <span class="feature-tag">SQLite</span>
-                        <span class="feature-tag">ML Prediction</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">🪟</div>
-                    <h3>Windows 11 Browser Simulation</h3>
-                    <div class="impact-section">
-                        <p><strong>Problem:</strong> Limited resources for learning advanced DOM manipulation.</p>
-                    </div>
-                    <p><strong>Solution:</strong> Built full Windows 11 simulation with advanced JavaScript interactions.</p>
-                    <p><strong>Result:</strong> Created reusable component library with <span style="color: var(--secondary);">99% UI accuracy</span>.</p>
-                    <div class="project-features">
-                        <span class="feature-tag">JavaScript</span>
-                        <span class="feature-tag">DOM Manipulation</span>
-                        <span class="feature-tag">UI Recreation</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">📧</div>
-                    <h3>AI-Powered Email Client</h3>
-                    <div class="impact-section">
-                        <p><strong>Problem:</strong> Email management at scale required manual categorization and response drafting.</p>
-                    </div>
-                    <p><strong>Solution:</strong> Built full-stack client with Next.js, Anthropic SDK, and Gmail API.</p>
-                    <p><strong>Result:</strong> <span style="color: var(--secondary);">70% reduction</span> in email processing time with context-aware AI responses.</p>
-                    <div class="project-features">
-                        <span class="feature-tag">Next.js 14</span>
-                        <span class="feature-tag">Gmail API</span>
-                        <span class="feature-tag">Anthropic SDK</span>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="github"></i></div>
+                        <div>
+                            <div class="contact-label">GitHub</div>
+                            <div class="contact-value">
+                                <a href="https://github.com/atulchoudhary7781-dot" target="_blank">github.com/atulchoudhary7781-dot →</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Arsenal</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>🤖 AI & LLMs</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">LangChain</span>
-                        <span class="skill-item">Groq SDK</span>
-                        <span class="skill-item">Vertex AI</span>
-                        <span class="skill-item">Anthropic API</span>
-                        <span class="skill-item">Prompt Engineering</span>
-                        <span class="skill-item">RAG Pipelines</span>
-                        <span class="skill-item">Multi-Agent Systems</span>
-                        <span class="skill-item">Agentic Workflows</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🐍 Programming Languages</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Python (Advanced)</span>
-                        <span class="skill-item">JavaScript/TypeScript</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Bash/PowerShell</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>⚙️ Web Frameworks</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">FastAPI</span>
-                        <span class="skill-item">Streamlit</span>
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">Next.js</span>
-                        <span class="skill-item">Flet</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>☁️ Cloud & DevOps</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Google Cloud Platform</span>
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">Azure</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Git/GitHub</span>
-                        <span class="skill-item">CI/CD Pipelines</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🎯 Core Specializations</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Autonomous Agents</span>
-                        <span class="skill-item">Agentic AI Architecture</span>
-                        <span class="skill-item">System Design</span>
-                        <span class="skill-item">Performance Optimization</span>
-                        <span class="skill-item">API Design (REST)</span>
-                        <span class="skill-item">Database Design</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>🏆 Professional Credentials</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Google Generative AI</span>
-                        <span class="skill-item">Google Vertex AI Studio</span>
-                        <span class="skill-item">Deloitte Tech Simulation</span>
-                        <span class="skill-item">95th Percentile CCAT</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Invisible Technologies</h3>
-                        <div class="role">AI Operations Advanced Specialist</div>
-                        <div class="date">May 2026 - Present (2 months)</div>
-                        <p>Successfully collaborating asynchronously with global US-based teams to deliver production-grade Generative AI solutions. Demonstrating strong adaptability to cross-time-zone engineering environments and delivering scalable AI infrastructure.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Jarvis AI Project</h3>
-                        <div class="role">AI Product Engineer</div>
-                        <div class="date">February 2026 - Present (5 months)</div>
-                        <p>Architected Jarvis, a production-ready multimodal autonomous agent. Implemented multi-agent orchestration, high-performance RAG pipelines, FastAPI server with 20+ endpoints, Docker containerization, and cloud deployment across GCP/AWS/Azure.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Education</h3>
-                        <div class="role">Software Engineering & Digital Marketing Diplomas</div>
-                        <div class="date">2022 - 2025</div>
-                        <p>Indian Institute of Computer Science (Software Engineering & Digital Marketing) | School of Open Learning, University of Delhi (BA in Arts) | Consecutive "Student of the Month" awards in Computer Science.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER / CTA -->
-    <section class="footer" id="contact">
-        <div class="container">
-            <h2>Let's Build Something Extraordinary</h2>
-            <p class="subtitle">I'm currently seeking remote AI/GenAI/Agentic AI Engineering roles</p>
-            <p class="availability">If you're building in the agentic AI space, I'd love to chat. Let's create something that matters. 🚀</p>
-            
-            <div class="social-links">
-                <a href="https://linkedin.com/in/atul-choudhary-018037301" target="_blank" class="social-link" title="LinkedIn">in</a>
-                <a href="https://github.com/atulchoudhary7781-dot" target="_blank" class="social-link" title="GitHub">⚙️</a>
-                <a href="https://atul-portfolio-alpha.vercel.app" target="_blank" class="social-link" title="Portfolio">🌐</a>
-                <a href="mailto:atulchoudhary7781@gmail.com" class="social-link" title="Email">✉️</a>
-            </div>
-            
-            <div class="cta-buttons">
-                <a href="mailto:atulchoudhary7781@gmail.com?subject=AI%20Engineering%20Opportunity%20-%20Remote%20Role" class="btn btn-primary">Email Me About Opportunities</a>
-                <a href="tel:+918076009041" class="btn btn-secondary">Call +91 807-600-9041</a>
-            </div>
-            
-            <div class="employment-details">
-                <p><strong>Open to:</strong> USA-based remote roles</p>
-                <p><strong>Role Types:</strong> AI Engineer, LLM Engineer, Applied AI Engineer, GenAI/Agentic AI Engineer</p>
-                <p><strong>Level:</strong> Entry to Junior level</p>
-                <p><strong>Visa:</strong> H-1B sponsorship available</p>
-                <p><strong>Salary:</strong> $120k+</p>
-                <p><strong>Availability:</strong> Immediately</p>
-            </div>
-
-            <p class="footer-credit">© 2025 Atul | AI Operations & Agentic AI Engineer | Built with Passion, Code & Coffee</p>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <p>
+            Designed & Built by <a href="#">Atul</a> • © 2026
+        </p>
+        <p style="margin-top: 8px; font-size: 12px;">
+            Powered by HTML, CSS & JavaScript
+        </p>
+    </footer>
 
     <script>
-        function createStars() {
-            const starfield = document.getElementById('starfield');
-            for (let i = 0; i < 100; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                starfield.appendChild(star);
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // ============ PARTICLE SYSTEM ============
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        let particles = [];
+        const particleCount = 80;
+        const colors = ['#F97316', '#EF4444', '#FB923C', '#FCA5A5', '#FDBA74'];
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        function createParticle() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                size: Math.random() * 3 + 1,
+                opacity: Math.random() * 0.6 + 0.2,
+                color: colors[Math.floor(Math.random() * colors.length)]
+            };
+        }
+        
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(createParticle());
             }
         }
+        
+        function drawParticle(p) {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = p.opacity;
+            ctx.fill();
+            ctx.globalAlpha = 1;
+        }
+        
+        function connectParticles() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 120) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = '#F97316';
+                        ctx.globalAlpha = 0.15 * (1 - distance / 120);
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                        ctx.globalAlpha = 1;
+                    }
+                }
+            }
+        }
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                
+                drawParticle(p);
+            });
+            
+            connectParticles();
+            requestAnimationFrame(animateParticles);
+        }
+        
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+        });
+        
+        resizeCanvas();
+        initParticles();
+        animateParticles();
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const element = document.querySelector(href);
-                    if (element) {
-                        element.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+        // ============ TYPING EFFECT ============
+        const typingTexts = [
+            "AI Operations Specialist",
+            "Jarvis AI Architect",
+            "RAG Pipeline Engineer",
+            "Multi-Agent Orchestrator",
+            "Generative AI Builder"
+        ];
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typing-text');
+        
+        function typeText() {
+            const currentText = typingTexts[textIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(typeText, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % typingTexts.length;
+                setTimeout(typeText, 500);
+            } else {
+                setTimeout(typeText, isDeleting ? 50 : 100);
+            }
+        }
+        
+        typeText();
+
+        // ============ NAVBAR SCROLL EFFECT ============
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ============ MOBILE MENU ============
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // ============ SCROLL ANIMATIONS ============
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate skill bars
+                    const skillBar = entry.target.querySelector('.skill-progress');
+                    if (skillBar) {
+                        const progress = skillBar.getAttribute('data-progress');
+                        setTimeout(() => {
+                            skillBar.style.width = progress + '%';
+                        }, 200);
                     }
                 }
             });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ============ SMOOTH SCROLL FOR NAV LINKS ============
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
         });
-
-        createStars();
-
-        console.log('%c⚡ Hey there! 👋', 'font-size: 20px; color: #7c3aed; font-weight: bold;');
-        console.log('%cLooking to hire? Atul is available! 🚀', 'font-size: 14px; color: #06b6d4;');
-        console.log('%cEmail: atulchoudhary7781@gmail.com', 'font-size: 12px; color: #e2e8f0;');
-        console.log('%cLinkedIn: linkedin.com/in/atul-choudhary-018037301', 'font-size: 12px; color: #e2e8f0;');
     </script>
 </body>
 </html>
