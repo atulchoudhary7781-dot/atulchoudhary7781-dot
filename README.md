@@ -1,27 +1,80 @@
-# 💫 About Me:
-I am passionate about the evolution of Large Language Models (LLMs) and have a proven track record of implementing advanced prompt engineering techniques to optimize AI performance and reliability. My background combines technical rigor in software engineering with a strategic understanding of cloud infrastructure, particularly within the Google Cloud Platform (GCP) ecosystem. <br><br>Core Expertise:<br>1.Generative AI & LLMs: Prototyping and deploying models using Vertex AI Studio.  <br><br>2.Prompt Engineering: Developing advanced strategies to enhance AI system accuracy beyond traditional chatbot interfaces.  <br><br>3.Cloud Architecture: Building scalable solutions integrated with Google Cloud services.  <br><br>4.Data-Driven Optimization: Leveraging Google Analytics to track user behavior and refine application performance.<br><br>I am a continuous learner, certified in Vertex AI, and driven by the mission to organize information through advanced, accessible AI solutions.
+<div align="center">
 
+# Hi, I'm Atul Choudhary 👋
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/atul-choudhary-0180373) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:atulchoudhary7781@gmail.com) 
+### AI Product Engineer · Agentic AI · Generative AI
 
-# 💻 Tech Stack:
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![OpenAPI Specification](https://img.shields.io/badge/openapiinitiative-%23000000.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white) ![Context-API](https://img.shields.io/badge/Context--Api-000000?style=for-the-badge&logo=react) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white) ![Xbox](https://img.shields.io/badge/xbox-%23107C10.svg?style=for-the-badge&logo=xbox&logoColor=white) ![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white) ![PlayStation Network](https://img.shields.io/badge/PSN-%230070D1.svg?style=for-the-badge&logo=Playstation&logoColor=white) ![Epic Games](https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white) ![AMD](https://img.shields.io/badge/AMD-%23000000.svg?style=for-the-badge&logo=amd&logoColor=white) ![Uber](https://img.shields.io/badge/Uber-%23000000.svg?style=for-the-badge&logo=Uber&logoColor=white) ![nVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) ![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=atulchoudhary7781-dot&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=atulchoudhary7781-dot&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=atulchoudhary7781-dot&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+Building intelligent products with autonomous agents, retrieval-augmented generation, and modern AI infrastructure.
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=atulchoudhary7781-dot&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+[![Portfolio](https://img.shields.io/badge/Portfolio-1a1a2e?style=for-the-badge&logo=vercel&logoColor=white)](https://atul-portfolio-alpha.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/atul-choudhary-018037301/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:atulchoudhary7781@gmail.com)
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+📍 New Delhi, India
 
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=atulchoudhary7781-dot&limit=5&theme=dark&combine_all_yearly_contributions=true)
+</div>
 
 ---
-[![](https://visitcount.itsvg.in/api?id=atulchoudhary7781-dot&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## About Me
+
+I'm an AI Product Engineer focused on turning advances in AI into practical, reliable products. I work with **multimodal AI agents, RAG pipelines, and multi-agent orchestration**, bringing together language models, APIs, and cloud infrastructure to solve real-world problems.
+
+- 🤖 Building autonomous workflows and AI-powered applications
+- 🔎 Exploring semantic search, retrieval, and LLM optimization
+- ⚡ Interested in low-latency inference and production reliability
+- ☁️ Working across Python, LangChain, Groq SDK, Vertex AI, and FastAPI
+
+## Featured Projects
+
+### [Jarvis AI — Multimodal Autonomous Agent](https://github.com/atulchoudhary7781-dot/Jarvis-AI)
+
+An independent AI project combining voice, text, and vision with autonomous workflows. Built around multi-agent orchestration, retrieval-augmented generation, and low-latency inference, with a cross-platform interface.
+
+**Tech:** Python · LangChain · Groq SDK · Vertex AI · Flet
+
+### [Nexus AI — AI-Powered Web Platform](https://github.com/atulchoudhary7781-dot/AI-web)
+
+A web-based AI chat experience with streaming responses, vision capabilities, and file analysis. Built with a focus on responsive interactions and a polished user experience.
+
+**Tech:** Next.js · React · Tailwind CSS · OpenRouter API · Vercel
+
+[Explore Nexus AI ↗](https://ai-web-rho-fawn.vercel.app/) · [View my portfolio ↗](https://atul-portfolio-alpha.vercel.app/)
+
+## Technical Toolkit
+
+**AI & Machine Learning**  
+LangChain · LangGraph · Groq SDK · Vertex AI · PyTorch · Hugging Face · RAG · Prompt Engineering
+
+**Languages & APIs**  
+Python · JavaScript · SQL · FastAPI · Flask · REST APIs
+
+**Data & Infrastructure**  
+PostgreSQL · Pinecone · Chroma · FAISS · Google Cloud · Docker · Git · GitHub Actions
+
+**Web & Product**  
+Next.js · React · Tailwind CSS · Flet · Vercel
+
+## Experience
+
+- **AI Product Engineer — Jarvis AI** | Independent project  
+  Building multimodal agent systems, RAG pipelines, and cross-platform AI experiences.
+- **AI & Machine Learning Intern — Venura Tech** | May–June 2026  
+  Worked on AI applications, agentic workflows, and the Nexus AI web platform.
+
+## Certifications & Learning
+
+- Introduction to Generative AI — Google
+- Gen AI: Beyond the Chatbot
+- AI for Coding using Tabnine
+- Technology and Data Analytics Job Simulations — Deloitte Australia
+
+---
+
+<div align="center">
+
+**Let's connect and build something meaningful with AI.**
+
+[Portfolio](https://atul-portfolio-alpha.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/atul-choudhary-018037301/) · [Email](mailto:atulchoudhary7781@gmail.com)
+
+</div>
