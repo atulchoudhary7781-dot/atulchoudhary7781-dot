@@ -1,16 +1,23 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:080b14,45:54121a,75:a31f26,100:ecb65b&height=230&section=header&text=ATUL%20CHOUDHARY&fontSize=44&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=AI%20PRODUCT%20ENGINEER%20%2F%2F%20BUILDING%20INTELLIGENT%20SYSTEMS&descAlignY=60&descSize=14" alt="Atul Choudhary — AI Product Engineer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:080611,35:251142,65:641e35,100:d5a54b&height=230&section=header&text=ATUL%20CHOUDHARY&fontSize=44&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=AI%20PRODUCT%20ENGINEER%20%2F%2F%20BEYOND%20THE%20LIMITS%20OF%20INTELLIGENCE&descAlignY=60&descSize=14" alt="Atul Choudhary — AI Product Engineer" />
 
-<img src="https://readme-typing-svg.demolab.com/?font=Orbitron&weight=600&size=20&duration=2600&pause=1100&color=36D9F5&center=true&vCenter=true&width=670&lines=INITIALIZING+INTELLIGENT+SYSTEMS...;AI+PRODUCT+ENGINEER+%7C+NEW+DELHI;AGENTIC+AI+%7C+RAG+%7C+MULTI-AGENT+SYSTEMS;BUILDING+THE+NEXT+GENERATION+OF+AI" alt="AI Product Engineer working on agentic AI, RAG and multi-agent systems" />
-
-<br />
-
-<img src="https://raw.githubusercontent.com/mihiragarwal92/Jarvis-AI-Assistant/main/jarvis-iron-man.gif" width="420" alt="Decorative JARVIS-inspired animated HUD" />
+<img src="https://readme-typing-svg.demolab.com/?font=Orbitron&weight=600&size=20&duration=2600&pause=1100&color=36D9F5&center=true&vCenter=true&width=670&lines=INITIALIZING+THE+NEXT+GENERATION+OF+AI...;AI+PRODUCT+ENGINEER+%7C+NEW+DELHI;AGENTIC+AI+%7C+RAG+%7C+MULTI-AGENT+SYSTEMS;BUILDING+BEYOND+THE+LIMITS" alt="AI Product Engineer working on agentic AI, RAG and multi-agent systems" />
 
 <br />
 
-`◆ AGENTIC AI` &nbsp; `◆ MULTIMODAL SYSTEMS` &nbsp; `◆ RAG` &nbsp; `◆ LLM ENGINEERING`
+<img src="https://media1.tenor.com/m/AedmsJ1oDCYAAAAd/avengers-infinity-war-iron-man.gif" width="560" alt="Iron Man nanotech animation from Avengers: Infinity War" />
+
+<br />
+
+### `THE FUTURE IS BUILT, NOT PREDICTED.`
+
+![Agents](https://img.shields.io/badge/AGENTS-7B2CBF?style=for-the-badge)
+![RAG](https://img.shields.io/badge/RAG-2575C7?style=for-the-badge)
+![LLMs](https://img.shields.io/badge/LLMs-CB3234?style=for-the-badge)
+![Vision](https://img.shields.io/badge/VISION-CB9422?style=for-the-badge)
+![Cloud](https://img.shields.io/badge/CLOUD-278A64?style=for-the-badge)
+![Orchestration](https://img.shields.io/badge/ORCHESTRATION-C96D2A?style=for-the-badge)
 
 <br /><br />
 
@@ -22,7 +29,7 @@
 
 ---
 
-## ⌁ &nbsp; SYSTEM PROFILE
+## ◈ &nbsp; THE MISSION
 
 ```text
 ┌──────────────────────────────────────────────────────────┐
@@ -37,7 +44,7 @@ I build AI products that connect advanced models with real-world experiences. My
 
 > **From an idea to an intelligent system.**
 
-## ⌁ &nbsp; CORE CAPABILITIES
+## ◈ &nbsp; THE POWER OF INTELLIGENCE
 
 | `01 / AUTONOMOUS AGENTS` | `02 / KNOWLEDGE SYSTEMS` |
 | :--- | :--- |
@@ -45,10 +52,14 @@ I build AI products that connect advanced models with real-world experiences. My
 | **`03 / AI ENGINEERING`** | **`04 / PRODUCT DELIVERY`** |
 | LLM optimization, low-latency inference, model evaluation, and reliability. | APIs, cloud deployment, and cross-platform AI experiences. |
 
-## ⌁ &nbsp; PROJECT ARCHIVE
+## ◈ &nbsp; PROJECT ARCHIVE
 
 ### `PROJECT 01` &nbsp; [JARVIS AI ↗](https://github.com/atulchoudhary7781-dot/Jarvis-AI)
 **Multimodal Autonomous AI Agent** · Independent project
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/mihiragarwal92/Jarvis-AI-Assistant/main/jarvis-iron-man.gif" width="320" alt="Decorative JARVIS-inspired animated HUD" />
+</div>
 
 An AI assistant combining **voice, text, and vision** with multi-agent workflows and retrieval-augmented generation. Designed around low-latency interactions and cross-platform experiences.
 
@@ -69,7 +80,7 @@ A web-based AI experience featuring **streaming chat, vision capabilities, and f
 ![OpenRouter](https://img.shields.io/badge/OPENROUTER_API-141B2D?style=flat-square&logoColor=50DDF7)
 ![Vercel](https://img.shields.io/badge/VERCEL-141B2D?style=flat-square&logo=vercel&logoColor=white)
 
-## ⌁ &nbsp; TECHNOLOGY ARSENAL
+## ◈ &nbsp; TECHNOLOGY ARSENAL
 
 <div align="center">
 
@@ -84,7 +95,7 @@ A web-based AI experience featuring **streaming chat, vision capabilities, and f
 | **Web & product** | JavaScript · Next.js · React · Tailwind CSS · Flet · Vercel |
 | **Cloud & delivery** | Google Cloud · Docker · Git · GitHub Actions · REST APIs |
 
-## ⌁ &nbsp; EXPERIENCE LOG
+## ◈ &nbsp; EXPERIENCE LOG
 
 **AI Product Engineer · Jarvis AI** — Independent project<br />
 Building multimodal agent systems, RAG pipelines, and cross-platform AI experiences.
@@ -111,8 +122,8 @@ Worked on AI applications, agentic workflows, and the Nexus AI web platform.
 
 [Portfolio](https://atul-portfolio-alpha.vercel.app/) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/atul-choudhary-018037301/) &nbsp;·&nbsp; [Email](mailto:atulchoudhary7781@gmail.com)
 
-<sub>Decorative HUD animation: [source](https://github.com/mihiragarwal92/Jarvis-AI-Assistant).</sub>
+<sub>Inspired by Avengers: Infinity War · [Iron Man animation](https://tenor.com/view/avengers-infinity-war-iron-man-nanotech-fire-shoot-gif-15540934) · [HUD animation](https://github.com/mihiragarwal92/Jarvis-AI-Assistant)</sub>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:080b14,45:54121a,75:a31f26,100:ecb65b&height=100&section=footer" alt="" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:080611,35:251142,65:641e35,100:d5a54b&height=100&section=footer" alt="" />
 
 </div>
